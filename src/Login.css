@@ -1,0 +1,28 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    color: #babafd;
+}
+.login_logo{
+    object-fit: contain;
+}
+.login > h1{
+    font-size: 3.0rem;
+    font-weight: 600;
+}
+.login > .login_button{
+    color: #15202B !important;
+    background-color: #1da1f1 !important;
+    width: 30%;
+    font-weight: 600 !important;
+}
+@media only screen and (max-width: 1240px){
+    .login > .login_button{
+        width: fit-content;
+    }
+}

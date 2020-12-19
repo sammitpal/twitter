@@ -1,0 +1,41 @@
+.tweet{
+    color: white;
+    margin: 10px 0;
+    border: 1px solid gray;
+    padding: 20px;
+}
+.tweet_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tweet_info{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.tweet_header_left{
+    display: flex;
+    align-items: center;
+}
+.tweet_info > h4{
+    margin: 0;
+}
+.tweet_info > p{
+    color: gray;
+    margin: 0;
+}
+.tweet_header_left > p{
+    margin-left: 20px;
+    color: gray;
+}
+.tweet_footer{
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.tweet_delete{
+    cursor: pointer;
+}

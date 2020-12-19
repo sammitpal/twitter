@@ -1,0 +1,22 @@
+.sidebar_row{
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 9999px;
+    padding: 0 10px;
+}
+.sidebar_row > h3{
+    margin-left: 10px;
+}
+.sidebar_row:hover{
+    color: #1da1f1;
+    background: rgba(29,161,241,0.1);
+    transition: all 0.2s ease-in-out;
+}
+@media only screen and (max-width: 1240px){
+    .sidebar_row >h3{
+        display: none;
+    }
+}

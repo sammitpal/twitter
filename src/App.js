@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Body from "./Body";
+import Login from "./Login";
+import RightBar from "./RightBar";
+import Sidebar from "./Sidebar";
+import {useStateValue} from './StateProvider'
+import {useEffect} from 'react'
+import {auth} from './firebase'
 function App() {
-  return (
+  const [{user},dispatch] = useStateValue();
+  useEffect(()=>{
+    auth.onAuthStateChanged(authUser => {
+      console.log("USER ->", authUser);
+      if(authUser){
+        dispatch({
+          type: 'SET_USER',
+          user: authUser
+        })
+      }
+      else{
+        dispatch({
+          type: 'SET_USER',
+          user: null
+        })
+      }
+    })
+  },[])
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {user ? (
+        <>
+          <Sidebar />
+          <Body />
+          <RightBar />
+        </>
+      ) : (
+        <Login />
+      )}
     </div>
   );
 }

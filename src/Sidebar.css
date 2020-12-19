@@ -1,0 +1,51 @@
+.sidebar{
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar_logo{
+    width: 40px;
+    object-fit: contain;
+    padding: 0 10px;
+}
+.tweetbutton{
+    margin: 0 10px;
+    background-color: #1da1f1 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    width: 50%;
+    border-radius: 9999px !important;
+}
+.sidebar_bottom{
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 50%;
+    border-radius: 9999px;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+.sidebar_bottom_info{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar_bottom_info > h4{
+    padding: 0;
+    margin: 0;
+}
+.sidebar_bottom_info > p{
+    padding: 0;
+    margin: 0;
+}
+.sidebar_bottom:hover{
+    background: rgba(29,161,241,0.1);
+    cursor: pointer;
+}
+@media only screen and (max-width: 640px){
+    .sidebar{
+        display: none;
+    }
+}
